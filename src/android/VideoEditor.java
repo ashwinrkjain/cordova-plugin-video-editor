@@ -160,11 +160,8 @@ public class VideoEditor extends CordovaPlugin {
             }
         }
 
-        final String outputFilePath = new File(
-                mediaStorageDir.getPath(),
-                outputFileName + outputExtension
-        ).getAbsolutePath();
-
+        // final String outputFilePath = new File("", outputFileName + outputExtension).getAbsolutePath();
+        String outputFilePath = outputFileName + outputExtension;
         Log.d(TAG, "outputFilePath: " + outputFilePath);
 
         cordova.getThreadPool().execute(new Runnable() {
